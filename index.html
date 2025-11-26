@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semra Hobi Dünyası - Siz Hayal Edin, Biz Örelim</title>
     <link rel="stylesheet" href="style.css"> 
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -21,7 +20,7 @@
 
             <div class="user-actions">
                 <a href="#"><i class="fas fa-user"></i> Giriş Yap</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> Sepet</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> Sepet (<span id="cart-count">0</span>)</a>
             </div>
         </div>
     </header>
@@ -29,11 +28,10 @@
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <li><a href="#anasayfa">Anasayfa</a></li>
-                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
                 <li><a href="#urunler">Ürünler</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="#">Blog</a></li> <li><a href="iletisim.html">İletişim</a></li>
             </ul>
         </div>
     </nav>
@@ -78,57 +76,57 @@
         <div class="container">
             <h2>Haftanın En Çok Satanları</h2>
             <div class="gallery-grid">
-                <div class="product-item">
+                <div class="product-item" data-id="1" data-price="999.00">
                     <img src="https://raw.githubusercontent.com/semraordu/semra-hobi-sitem/main/WhatsApp%20Image%202025-11-26%20at%2010.46.53%20(1).jpeg" alt="Hasır Örgü Çanta Gri" loading="lazy">
                     <h3>Hasır Örgü Çanta (Gri)</h3>
-                    <div class="price">₺999.00</div>
-                    <button class="add-to-cart">Sepete Ekle</button>
+                    <div class="price-info">
+                        <div class="price">₺999.00</div>
+                        <div class="kdv-info">KDV Dahil: ₺1198.80</div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(1, 'Hasır Örgü Çanta (Gri)', 999.00)">Sepete Ekle</button>
                 </div>
                 
-                <div class="product-item">
+                <div class="product-item" data-id="2" data-price="899.00">
                     <img src="https://raw.githubusercontent.com/semraordu/semra-hobi-sitem/main/WhatsApp%20Image%202025-11-26%20at%2010.46.53%20(2).jpeg" alt="Askılı Hasır Çanta" loading="lazy">
                     <h3>Askılı Hasır Örgü Çanta</h3>
-                    <div class="price">₺899.00</div>
-                    <button class="add-to-cart">Sepete Ekle</button>
+                    <div class="price-info">
+                        <div class="price">₺899.00</div>
+                        <div class="kdv-info">KDV Dahil: ₺1078.80</div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(2, 'Askılı Hasır Örgü Çanta', 899.00)">Sepete Ekle</button>
                 </div>
 
-                <div class="product-item">
+                <div class="product-item" data-id="3" data-price="1099.00">
                     <img src="https://raw.githubusercontent.com/semraordu/semra-hobi-sitem/main/WhatsApp%20Image%202025-11-26%20at%2010.46.53.jpeg" alt="Hasır Plaj Çantası" loading="lazy">
                     <h3>Hasır Örgü Plaj Çantası</h3>
-                    <div class="price">₺1099.00</div>
-                    <button class="add-to-cart">Sepete Ekle</button>
+                    <div class="price-info">
+                        <div class="price">₺1099.00</div>
+                        <div class="kdv-info">KDV Dahil: ₺1318.80</div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(3, 'Hasır Örgü Plaj Çantası', 1099.00)">Sepete Ekle</button>
                 </div>
                 
-                <div class="product-item">
+                <div class="product-item" data-id="4" data-price="1049.00">
                     <img src="https://raw.githubusercontent.com/semraordu/semra-hobi-sitem/main/WhatsApp%20Image%202025-11-26%20at%2010.46.54%20(1).jpeg" alt="Kollu Hasır Çanta" loading="lazy">
                     <h3>Hasır Örgü Kollu Çanta</h3>
-                    <div class="price">₺1049.00</div>
-                    <button class="add-to-cart">Sepete Ekle</button>
+                    <div class="price-info">
+                        <div class="price">₺1049.00</div>
+                        <div class="kdv-info">KDV Dahil: ₺1258.80</div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(4, 'Hasır Örgü Kollu Çanta', 1049.00)">Sepete Ekle</button>
                 </div>
 
-                <div class="product-item">
+                <div class="product-item" data-id="5" data-price="1299.00">
                     <img src="https://raw.githubusercontent.com/semraordu/semra-hobi-sitem/main/WhatsApp%20Image%202025-11-26%20at%2010.46.54.jpeg" alt="Prenses Örgü Çanta" loading="lazy">
                     <h3>Prenses Örgü Çanta</h3>
-                    <div class="price">₺1299.00</div>
-                    <button class="add-to-cart">Sepete Ekle</button>
+                    <div class="price-info">
+                        <div class="price">₺1299.00</div>
+                        <div class="kdv-info">KDV Dahil: ₺1558.80</div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(5, 'Prenses Örgü Çanta', 1299.00)">Sepete Ekle</button>
                 </div>
 
             </div>
-        </div>
-    </section>
-
-    <section id="hakkimizda" class="about">
-        <div class="container">
-            <h2>Semra Hobi Dünyası Kimdir?</h2>
-            <p>
-                **Semra Hobi Dünyası**, el emeği ve tutkuyla örülen her ilmeğin bir hikayesi olduğuna inanan bir ailenin projesidir. 2020 yılında küçük bir atölyede başlayan yolculuğumuzda amacımız, sadece yüksek kaliteli iplik ve malzemeleri sunmak değil, aynı zamanda hayallerinizi somut projelere dönüştürmeniz için size ilham vermektir.
-            </p>
-            <p>
-                Tüm ürünlerimiz büyük bir özenle seçilmiş olup, dayanıklılık ve estetiği bir araya getirir. Amigurumi oyuncaklardan, özel tasarım şallara ve bebek battaniyelerine kadar her ürünümüz, sıcaklık ve sevgi taşır. Bizim için bir müşteri değil, bu el emeği dünyasının bir parçasısınız.
-            </p>
-            <p>
-                **Misyonumuz:** Kaliteli malzemeleri uygun fiyatlarla sunarak el sanatları kültürünü yaşatmak ve herkesin kendi yaratıcılığını keşfetmesine olanak tanımaktır.
-            </p>
         </div>
     </section>
 
@@ -137,7 +135,7 @@
             <div>
                 <h3>Kurumsal</h3>
                 <ul>
-                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
                     <li><a href="#">Kullanım Koşulları</a></li>
                     <li><a href="#">Gizlilik Politikası</a></li>
                 </ul>
@@ -147,7 +145,7 @@
                 <ul>
                     <li><a href="#">Sıkça Sorulan Sorular</a></li>
                     <li><a href="#">Kargo ve İade</a></li>
-                    <li><a href="#iletisim">İletişim Formu</a></li>
+                    <li><a href="iletisim.html">İletişim Formu</a></li>
                 </ul>
             </div>
             <div>
