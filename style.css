@@ -1,4 +1,4 @@
-/* CSS RESET / NORMALİZASYON (En son eklenen kod) */
+/* CSS RESET / NORMALİZASYON */
 * {
     box-sizing: border-box; 
     margin: 0;
@@ -12,7 +12,6 @@ h1, h2, h3, h4, h5, h6, p, ul { margin: 0; padding: 0; }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; height: auto; display: block; }
 
-
 /* Genel Ayarlar ve E-ticaret Fontu */
 :root {
     --primary-color: #e8a87c; /* Sıcak Hobi Rengi */
@@ -25,7 +24,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Modern, temiz font */
+    font-family: 'Arial', sans-serif;
     background-color: var(--light-background);
     color: var(--text-color);
     line-height: 1.6;
@@ -65,7 +64,6 @@ body {
 .search-box button:hover { background-color: #d18d60; }
 .user-actions { display: flex; justify-content: flex-end; gap: 20px; }
 .user-actions a {
-    text-decoration: none;
     color: var(--secondary-color);
     font-weight: 600;
 }
