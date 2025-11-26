@@ -11,7 +11,8 @@ const cartTable = document.getElementById('cart-items-table');
 document.addEventListener('DOMContentLoaded', () => {
     // Sayfa Yüklenince Sepeti Kontrol Et
     updateCartCount();
-    if (document.body.classList.contains('cart-page')) {
+    // cart.html sayfasında olup olmadığımızı kontrol et
+    if (document.title.includes('Sepetiniz')) { 
         renderCart();
     }
 });
@@ -58,7 +59,9 @@ window.addToCart = function(id, name, price) {
     }
 
     saveCart(cart);
-    alert(`${name} sepete eklendi! Toplam ürün: ${cartCountElement.textContent}`);
+    
+    // KRİTİK DÜZELTME: Sepet başarılı kaydedildikten sonra kullanıcıyı direkt sepet sayfasına yönlendir.
+    window.location.href = 'cart.html'; 
 };
 
 // 2. Sepet İçeriğini Sayfaya Çizer (cart.html için)
@@ -67,16 +70,18 @@ function renderCart() {
 
     // Sepet Boş Kontrolü
     if (cart.length === 0) {
-        emptyCartMessage.style.display = 'block';
-        cartSummary.style.display = 'none';
-        cartTable.style.display = 'none';
+        if (emptyCartMessage) emptyCartMessage.style.display = 'block';
+        if (cartSummary) cartSummary.style.display = 'none';
+        if (cartTable) cartTable.style.display = 'none';
         return;
     }
 
-    emptyCartMessage.style.display = 'none';
-    cartSummary.style.display = 'block';
-    cartTable.style.display = 'table';
+    if (emptyCartMessage) emptyCartMessage.style.display = 'none';
+    if (cartSummary) cartSummary.style.display = 'block';
+    if (cartTable) cartTable.style.display = 'table';
     
+    if (!cartItemsBody) return; // Eğer body yoksa durdur
+
     cartItemsBody.innerHTML = ''; // Tabloyu temizle
 
     let subtotal = 0;
@@ -106,9 +111,9 @@ function renderCart() {
     const kdv = subtotal * KDV_RATE;
     const grandTotal = subtotal + kdv;
 
-    subtotalDisplay.textContent = formatPrice(subtotal);
-    kdvDisplay.textContent = formatPrice(kdv);
-    grandTotalDisplay.textContent = formatPrice(grandTotal);
+    if (subtotalDisplay) subtotalDisplay.textContent = formatPrice(subtotal);
+    if (kdvDisplay) kdvDisplay.textContent = formatPrice(kdv);
+    if (grandTotalDisplay) grandTotalDisplay.textContent = formatPrice(grandTotal);
 }
 
 // 3. Sepetten Ürün Çıkarır (Tekrar Çizimi Tetikler)
@@ -125,14 +130,17 @@ window.removeFromCart = function(id) {
     }
     
     saveCart(cart);
-    renderCart();
+    // Eğer sepet sayfasındaysak, sayfayı tekrar çiz
+    if (document.title.includes('Sepetiniz')) {
+        renderCart();
+    }
 };
 
 
 // 4. Slider Kodunun Kalıntıları (Index sayfasında çalışması için)
 document.addEventListener('DOMContentLoaded', () => {
-    // Eğer Anasayfada değilsek, Slider kodunu çalıştırma
-    if (document.body.classList.contains('cart-page')) return; 
+    // Eğer Sepet sayfasındaysak, Slider kodunu çalıştırma
+    if (document.title.includes('Sepetiniz')) return; 
 
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');
