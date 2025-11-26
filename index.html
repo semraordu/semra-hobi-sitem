@@ -1,132 +1,145 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semra Hobi Dünyası - Siz Hayal Edin, Biz Örelim</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
 
-<header class="main-header">
-    <div class="container header-grid">
-        <div class="logo">Semra Hobi Dünyası</div>
-        
-        <div class="search-box">
-            <input type="text" placeholder="Ürün, ip, desen ara...">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-
-        <div class="user-actions">
-            <a href="#"><i class="fas fa-user"></i> Giriş Yap</a>
-            <a href="#"><i class="fas fa-shopping-cart"></i> Sepet</a>
-        </div>
-    </div>
-</header>
-
-<nav class="main-nav">
-    <div class="container">
-        <ul>
-            <li><a href="#anasayfa">Anasayfa</a></li>
-            <li><a href="#hakkimizda">Hakkımızda</a></li>
-            <li><a href="#urunler">Ürünler</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
-        </ul>
-    </div>
-</nav>
-
-<section class="hero" id="anasayfa">
-    <div class="slider-container">
-        <div class="slide active"><img src="https://picsum.photos/1920/600?seed=hobiA" alt="Örgü Ürünü 1"></div>
-        <div class="slide"><img src="https://picsum.photos/1920/600?seed=hobiB" alt="Örgü Ürünü 2"></div>
-        <div class="slide"><img src="https://picsum.photos/1920/600?seed=hobiC" alt="Örgü Ürünü 3"></div>
-    </div>
-    <div class="hero-overlay">
-        <h1>Siz Hayal Edin, Biz Örelim.</h1>
-        <a href="#urunler" class="cta-button">Hemen Alışverişe Başla</a>
-    </div>
-</section>
-
-<section class="categories">
-    <div class="container">
-        <h2>Popüler Kategoriler</h2>
-        <div class="category-grid">
-            <a href="#" class="category-item">
-                <img src="https://picsum.photos/200/200?seed=kategori1" alt="Amigurumi">
-                <p>Amigurumi Malzemeleri</p>
-            </a>
-            <a href="#" class="category-item">
-                <img src="https://picsum.photos/200/200?seed=kategori2" alt="Örgü İpi">
-                <p>Özel İplik Çeşitleri</p>
-            </a>
-            <a href="#" class="category-item">
-                <img src="https://picsum.photos/200/200?seed=kategori3" alt="Tığ Setleri">
-                <p>Tığ ve Şiş Setleri</p>
-            </a>
-            <a href="#" class="category-item">
-                <img src="https://picsum.photos/200/200?seed=kategori4" alt="Aksesuarlar">
-                <p>Hobi Aksesuarları</p>
-            </a>
-        </div>
-    </div>
-</section>
-
-<section id="urunler" class="product-gallery">
-    <div class="container">
-        <h2>Haftanın En Çok Satanları</h2>
-        <div class="gallery-grid">
-            <div class="product-item">
-                <img src="https://picsum.photos/300/350?seed=urunA" alt="Amigurumi Ayıcık" loading="lazy">
-                <h3>Amigurumi Ayıcık</h3>
-                <div class="price">₺129.90</div>
-                <button class="add-to-cart">Sepete Ekle</button>
+    <header class="main-header">
+        <div class="container header-grid">
+            <div class="logo">Semra Hobi Dünyası</div>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Ürün, ip, desen ara...">
+                <button><i class="fas fa-search"></i></button>
             </div>
-            <div class="product-item">
-                <img src="https://picsum.photos/300/350?seed=urunB" alt="Makrome Duvar Dekoru" loading="lazy">
-                <h3>Premium Makrome İpi</h3>
-                <div class="price">₺89.90</div>
-                <button class="add-to-cart">Sepete Ekle</button>
-            </div>
-            <div class="product-item">
-                <img src="https://picsum.photos/300/350?seed=urunC" alt="Bebek Battaniyesi" loading="lazy">
-                <h3>Bebek Battaniyesi</h3>
-                <div class="price">₺249.90</div>
-                <button class="add-to-cart">Sepete Ekle</button>
+
+            <div class="user-actions">
+                <a href="#"><i class="fas fa-user"></i> Giriş Yap</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Sepet</a>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<section id="hakkimizda" class="about">
-    <div class="container">
-        <h2>Semra Hobi Dünyası Kimdir?</h2>
-        <p>Tutkuyla örülen her ilmek, sıcaklık ve sevgi taşır. 2020 yılından beri el yapımı ürünlerimizle hayatınıza renk katıyoruz. Amacımız sadece ürün satmak değil, hayallerinizi somut hale getirmektir.</p>
-    </div>
-</section>
-
-<footer id="iletisim">
-    <div class="container footer-grid">
-        <div>
-            <h3>Kurumsal</h3>
+    <nav class="main-nav">
+        <div class="container">
             <ul>
+                <li><a href="#anasayfa">Anasayfa</a></li>
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
-                <li><a href="#">Kullanım Koşulları</a></li>
-                <li><a href="#">Gizlilik Politikası</a></li>
+                <li><a href="#urunler">Ürünler</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </div>
-        <div>
-            <h3>Müşteri Hizmetleri</h3>
-            <ul>
-                <li><a href="#">Sıkça Sorulan Sorular</a></li>
-                <li><a href="#">Kargo ve İade</a></li>
-                <li><a href="#iletisim">İletişim Formu</a></li>
-            </ul>
+    </nav>
+
+    <section class="hero" id="anasayfa">
+        <div class="slider-container">
+            <div class="slide active"><img src="https://picsum.photos/1920/600?seed=hobiA" alt="Örgü Ürünü 1"></div>
+            <div class="slide"><img src="https://picsum.photos/1920/600?seed=hobiB" alt="Örgü Ürünü 2"></div>
+            <div class="slide"><img src="https://picsum.photos/1920/600?seed=hobiC" alt="Örgü Ürünü 3"></div>
         </div>
-        <div>
-            <h3>İletişim Bilgileri</h3>
-            <p><i class="fas fa-phone"></i> **Telefon:** <a href="tel:05466441981">0546 644 19 81</a></p>
-            <p><i class="fas fa-envelope"></i> **E-posta:** <a href="mailto:meteoordu@gmail.com">meteoordu@gmail.com</a></p>
-            <div class="social-media">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
+        <div class="hero-overlay">
+            <h1>Siz Hayal Edin, Biz Örelim.</h1>
+            <a href="#urunler" class="cta-button">Hemen Alışverişe Başla</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2>Popüler Kategoriler</h2>
+            <div class="category-grid">
+                <a href="#" class="category-item">
+                    <img src="https://picsum.photos/200/200?seed=kategori1" alt="Amigurumi">
+                    <p>Amigurumi Malzemeleri</p>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="https://picsum.photos/200/200?seed=kategori2" alt="Örgü İpi">
+                    <p>Özel İplik Çeşitleri</p>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="https://picsum.photos/200/200?seed=kategori3" alt="Tığ Setleri">
+                    <p>Tığ ve Şiş Setleri</p>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="https://picsum.photos/200/200?seed=kategori4" alt="Aksesuarlar">
+                    <p>Hobi Aksesuarları</p>
+                </a>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2025 Semra Hobi Dünyası. Tüm Hakları Saklıdır.</p>
-    </div>
+    </section>
 
-</footer>
+    <section id="urunler" class="product-gallery">
+        <div class="container">
+            <h2>Haftanın En Çok Satanları</h2>
+            <div class="gallery-grid">
+                <div class="product-item">
+                    <img src="https://picsum.photos/300/350?seed=urunA" alt="Amigurumi Ayıcık" loading="lazy">
+                    <h3>Amigurumi Ayıcık</h3>
+                    <div class="price">₺129.90</div>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://picsum.photos/300/350?seed=urunB" alt="Makrome Duvar Dekoru" loading="lazy">
+                    <h3>Premium Makrome İpi</h3>
+                    <div class="price">₺89.90</div>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://picsum.photos/300/350?seed=urunC" alt="Bebek Battaniyesi" loading="lazy">
+                    <h3>Bebek Battaniyesi</h3>
+                    <div class="price">₺249.90</div>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="about">
+        <div class="container">
+            <h2>Semra Hobi Dünyası Kimdir?</h2>
+            <p>Tutkuyla örülen her ilmek, sıcaklık ve sevgi taşır. 2020 yılından beri el yapımı ürünlerimizle hayatınıza renk katıyoruz. Amacımız sadece ürün satmak değil, hayallerinizi somut hale getirmektir.</p>
+        </div>
+    </section>
+
+    <footer id="iletisim">
+        <div class="container footer-grid">
+            <div>
+                <h3>Kurumsal</h3>
+                <ul>
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#">Kullanım Koşulları</a></li>
+                    <li><a href="#">Gizlilik Politikası</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Müşteri Hizmetleri</h3>
+                <ul>
+                    <li><a href="#">Sıkça Sorulan Sorular</a></li>
+                    <li><a href="#">Kargo ve İade</a></li>
+                    <li><a href="#iletisim">İletişim Formu</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>İletişim Bilgileri</h3>
+                <p><i class="fas fa-phone"></i> **Telefon:** <a href="tel:05466441981">0546 644 19 81</a></p>
+                <p><i class="fas fa-envelope"></i> **E-posta:** <a href="mailto:meteoordu@gmail.com">meteoordu@gmail.com</a></p>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Semra Hobi Dünyası. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
